@@ -1,0 +1,8 @@
+This repository is for a project called Really Big Clock
+It was meant to provide an easier way for me to "see" if I could continue sleeping or if I would be better of getting up.
+The plan is to have the digital clockface change its color related to the sleepime remaining.
+
+Hardwarebasis currently is the AVR_NetIO board sold by the germany based company www.pollin.de
+But since the project is Arduino based it can easily be adopted to every arduino board available.
+
+

@@ -106,26 +106,27 @@ pinMode(SI, OUTPUT);
 pinMode(SCLK, OUTPUT);
 pinMode(RCLK, OUTPUT);
 
+  #ifdef DEBUG
+  Serial.begin(9600);
+  Serial.println("READY");
+  delay(500);
+   #endif
 
-Serial.begin(9600);
-Serial.println("READY");
-delay(500);
+setTime(21,05,00,29,05,1977);
+ 
 //setSyncProvider(DCF77);
 //setSyncInterval(86400);
 
-setTime(06,05,00,29,05,1977);
-
-alarm1.h=6;
-alarm1.m=30;
-alarm1.d=62; // 00111110 all days except sundays and saturdays
 }
 
 
 void loop() {
 
-  ItsMagic(hour(15),minute(23));
+  ItsMagic(hour(now()),minute(now()));
  delay(100);
  #ifdef DEBUG
-   settime(hou
+  // beschleunigungsmodus
+   adjustTime(100);
+ #endif
   
 }
